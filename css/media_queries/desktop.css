@@ -1,0 +1,78 @@
+@media only screen and (min-device-width: 769px) and (max-device-width: 5000px) {
+    body{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrapper_container {
+        max-width: 1070px;
+        margin: 0 auto;
+    }
+    .main_container{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        font-size: 0px;
+    }
+    .menu {
+        width: 17%;
+        display: inline-block;
+    }
+    #logo{
+        font-size: 20px;
+        background-color: #23262b;
+        color: #c9c9c9;
+        text-align: center;
+        font-family: Segoe UI;
+        padding: 15px 0px;
+        font-weight: bold;
+        margin: 0px;
+    }
+    .menu_content{
+        width: 100%;
+        background-color: #2a313b;
+    }
+    .display_picture{
+        padding: 35px 0px;
+        margin: 0 auto;
+        width: 73%;
+    }
+    #dp_name{
+        background-color: #fff;
+        color: #000;
+        font-size: 10px;
+        text-align: center;
+        font-family: Segoe UI;
+        font-weight: bold;
+        padding:40px 0px;
+    }
+    .menu_items ul li{
+        font-size: 12px;
+        padding: 20px 0px;
+        color: #fff;
+        font-family: Arial;
+        cursor: pointer;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .menu_items ul li:hover{
+        background-color:#23262b;
+    }
+    .glyphicon{
+        padding:0px 10px 0 10px;
+        width: 36%;
+        padding-left: 25%;
+    }
+    #menu_item_name{
+        width: 64%;
+        padding-left: 5%;
+    }
+    
+    .main_content {
+        width: 83%;
+        display: inline-block;
+        height: 100px;
+        background-color: forestgreen;
+    }
+    
+    
+}
