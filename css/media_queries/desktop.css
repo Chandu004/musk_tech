@@ -15,7 +15,7 @@
     }
     .menu {
         width: 17%;
-        display: inline-block;
+        float: left;
     }
     #logo{
         font-size: 20px;
@@ -69,10 +69,125 @@
     
     .main_content {
         width: 83%;
-        display: inline-block;
-        height: 100px;
-        background-color: forestgreen;
+        float: right;
+        background-color: #fff;
     }
-    
-    
+    .main_content_header{
+        width: 100%;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #c7c7c7;
+        overflow: hidden;
+    }
+    .path_display{
+        width: 25%;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: Segoe UI;
+        color: #696969;
+        padding:18px 0px;
+        text-align: center;
+        float: left;
+    }
+    .profile_options{
+        font-size: 13px;
+        font-weight: bold;
+        font-family: Segoe UI;
+        color: #696969;
+        padding:18px 0px;
+        text-align: center;
+        width:28%;
+        float: right;
+    }
+    .profile_icons{
+       padding: 0px 6px;
+    }
+    #support,#logout{
+       width: auto;
+       padding-left: 0px;
+        padding-right: 5px;
+    }
+    .main_content_wrapper{
+        width:72%;
+        margin: 30px auto 0px;
+    }
+    .kyc_company_form{
+        background-color: #ebebeb;
+        padding: 15px 15px 0 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #e3e3e3;
+    }
+    #kyc_headline{
+        font-size: 13px;
+        font-family: Segoe UI;
+        font-weight: bold;
+    }
+    #pan_card,#tin,#address_proof{
+        font-size: 12px;
+        font-family: Segoe UI;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+    .pan_card_form,.tin_form,.address_proof_form{
+        width: 100%;
+        margin-top: 38px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .pan_card_form_wrapper,.tin_form_wrapper,.address_proof_wrapper{
+        padding: 15px;
+        overflow: hidden;
+    }
+    .pan_card_details,.tin_details{
+        background-color: #fff;
+        width: 50%;
+        float: left;
+    }
+    .address_proof_details{
+        background-color: #fff;
+        width: 100%;
+        float: left;
+    }
+    .pan_card_upload{
+        background-color: #fff;
+        width: 50%;
+        float: right;
+    }
+    #pan_card_input,#tin_input{
+        border-width: 0px 0px 1px 0px;
+        border-color: #c7c7c7;
+        width: 78%;
+        padding-bottom: 15px;
+        margin: 15px 0px;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 13px; 
+        font-family: Segoe UI;
+        color: #808080;
+    }
+    ::-moz-placeholder { 
+        font-size: 13px;
+        font-family: Segoe UI;
+        color: #808080;
+    } /* firefox 19+ */
+    :-ms-input-placeholder { 
+        font-size: 13px; 
+        padding-bottom: 15px;
+        font-family: Segoe UI;
+        color: #808080;
+    } /* ie */
+    input:-moz-placeholder {
+        font-size: 13px;
+        padding-bottom: 15px;
+        font-family: Segoe UI;
+        color: #808080;
+    }
+    #radio_buttons_text{
+        font-size: 12px;
+        font-family: Segoe UI;
+    }
+    #address_radio_buttons{
+        width: 70%;
+    }
 }
