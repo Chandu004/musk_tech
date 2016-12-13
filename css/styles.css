@@ -1,4 +1,18 @@
+html{
+    height: 100%;
+}
 body{
+    height: 100%;
     width: 100%;
     background-color: #ebebeb !important;
+}
+
+.ng-invalid.ng-dirty{
+    border-width: 0px 0px 1px 0px !important;
+    border-color:#FF3B30 !important;
+}
+
+.error{
+    font-size: 10px;
+    font-family: Segoe UI;
 }

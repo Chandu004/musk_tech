@@ -1,23 +1,30 @@
 @media only screen and (min-device-width: 769px) and (max-device-width: 5000px) {
-    body{
+    body {
         width: 100%;
         margin: 0 auto;
     }
     .wrapper_container {
+        height: 100%;
+        min-height:100%;
         max-width: 1070px;
         margin: 0 auto;
     }
-    .main_container{
+    .main_container {
         width: 100%;
-        height: auto;
+        height: 100%;
         overflow: hidden;
         font-size: 0px;
+    }
+    .mobile_menu{
+        display: none;
     }
     .menu {
         width: 17%;
         float: left;
+        height: 100%;
+        background-color: #2a313b;
     }
-    #logo{
+    #logo {
         font-size: 20px;
         background-color: #23262b;
         color: #c9c9c9;
@@ -27,25 +34,25 @@
         font-weight: bold;
         margin: 0px;
     }
-    .menu_content{
+    .menu_content {
         width: 100%;
         background-color: #2a313b;
     }
-    .display_picture{
+    .display_picture {
         padding: 35px 0px;
         margin: 0 auto;
         width: 73%;
     }
-    #dp_name{
+    #dp_name {
         background-color: #fff;
         color: #000;
         font-size: 10px;
         text-align: center;
         font-family: Segoe UI;
         font-weight: bold;
-        padding:40px 0px;
+        padding: 40px 0px;
     }
-    .menu_items ul li{
+    .menu_items ul li {
         font-size: 12px;
         padding: 20px 0px;
         color: #fff;
@@ -54,140 +61,200 @@
         margin: 0 auto;
         width: 100%;
     }
-    .menu_items ul li:hover{
-        background-color:#23262b;
+    .menu_items ul li:hover {
+        background-color: #23262b;
     }
-    .glyphicon{
-        padding:0px 10px 0 10px;
+    .glyphicon {
+        padding: 0px 10px 0 10px;
         width: 36%;
         padding-left: 25%;
     }
-    #menu_item_name{
+    #menu_item_name {
+        font-family: Segoe UI;
         width: 64%;
         padding-left: 5%;
     }
-    
     .main_content {
         width: 83%;
         float: right;
         background-color: #fff;
+        height: 100%;
     }
-    .main_content_header{
+    .main_content_header {
         width: 100%;
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-bottom-color: #c7c7c7;
         overflow: hidden;
     }
-    .path_display{
+    .path_display {
         width: 25%;
         font-size: 13px;
         font-weight: bold;
         font-family: Segoe UI;
         color: #696969;
-        padding:18px 0px;
+        padding: 18px 0px;
         text-align: center;
         float: left;
     }
-    .profile_options{
+    .profile_options {
         font-size: 13px;
         font-weight: bold;
         font-family: Segoe UI;
         color: #696969;
-        padding:18px 0px;
+        padding: 18px 0px;
         text-align: center;
-        width:28%;
+        width: 28%;
         float: right;
     }
-    .profile_icons{
-       padding: 0px 6px;
+    .profile_icons {
+        padding: 0px 6px;
     }
-    #support,#logout{
-       width: auto;
-       padding-left: 0px;
+    #support,
+    #logout {
+        width: auto;
+        padding-left: 0px;
         padding-right: 5px;
     }
-    .main_content_wrapper{
-        width:72%;
+    .main_content_wrapper {
+        height: 100%;
+        width: 72%;
         margin: 30px auto 0px;
     }
-    .kyc_company_form{
+    .kyc_company_form {
         background-color: #ebebeb;
         padding: 15px 15px 0 15px;
         border-width: 1px;
         border-style: solid;
         border-color: #e3e3e3;
+        height: 100%;
     }
-    #kyc_headline{
+    #kyc_headline {
         font-size: 13px;
         font-family: Segoe UI;
         font-weight: bold;
     }
-    #pan_card,#tin,#address_proof{
+    .glyphicon-minus{
+        font-size: 12px;
+        text-align: center;
+        float: right;
+        width: 0%;
+        padding-left: 0px;
+    }
+    .glyphicon-plus{
+        display: none;
+        font-size: 12px;
+        text-align: center;
+        float: right;
+        width: 0%;
+    }
+    #pan_card,
+    #tin,
+    #address_proof {
         font-size: 12px;
         font-family: Segoe UI;
         padding-bottom: 20px;
         font-weight: bold;
     }
-    .pan_card_form,.tin_form,.address_proof_form{
+    .pan_card_form,
+    .tin_form,
+    .address_proof_form {
         width: 100%;
         margin-top: 38px;
         background-color: #fff;
         overflow: hidden;
     }
-    .pan_card_form_wrapper,.tin_form_wrapper,.address_proof_wrapper{
+    .pan_card_form_wrapper,
+    .tin_form_wrapper,
+    .address_proof_wrapper {
         padding: 15px;
         overflow: hidden;
     }
-    .pan_card_details,.tin_details{
+    .pan_card_details,
+    .tin_details {
         background-color: #fff;
         width: 50%;
         float: left;
     }
-    .address_proof_details{
+    .address_proof_details {
         background-color: #fff;
         width: 100%;
         float: left;
     }
-    .pan_card_upload{
+    .pan_card_upload {
         background-color: #fff;
         width: 50%;
         float: right;
+        border-left-style: dashed;
+        border-left-width: 1px;
     }
-    #pan_card_input,#tin_input{
+    .pan_card_upload_wrapper{
+         width: 65%;
+        margin: 0 auto;
+        background-color: #056dff;
+        text-align: center;
+        padding: 18px 0px;
+        border-radius: 5px;
+        margin-top: 25%;
+    }
+    #drag_and_drop{
+        font-size: 12px;
+        text-align: center;
+        padding:15px 0px;
+        font-family: Segoe UI;
+    }
+    .upload_button{
+        width: 100%;
+        font-size: 14px;
+        font-family: Segoe UI;
+        color: #fff;
+        text-decoration: none;
+    }
+    *:focus {
+        outline: none;
+    }
+    
+    #pan_card_input,
+    #tin_input {
         border-width: 0px 0px 1px 0px;
         border-color: #c7c7c7;
         width: 78%;
         padding-bottom: 15px;
         margin: 15px 0px;
+        color: #000;
     }
     ::-webkit-input-placeholder {
-        font-size: 13px; 
-        font-family: Segoe UI;
-        color: #808080;
-    }
-    ::-moz-placeholder { 
         font-size: 13px;
         font-family: Segoe UI;
         color: #808080;
-    } /* firefox 19+ */
-    :-ms-input-placeholder { 
-        font-size: 13px; 
+    }
+    ::-moz-placeholder {
+        font-size: 13px;
+        font-family: Segoe UI;
+        color: #808080;
+    }
+    /* firefox 19+ */
+    
+    :-ms-input-placeholder {
+        font-size: 13px;
         padding-bottom: 15px;
         font-family: Segoe UI;
         color: #808080;
-    } /* ie */
+    }
+    /* ie */
+    
     input:-moz-placeholder {
         font-size: 13px;
         padding-bottom: 15px;
         font-family: Segoe UI;
         color: #808080;
     }
-    #radio_buttons_text{
+    #radio_buttons_text {
+        width: 33%;
+        display:inline-block;
         font-size: 12px;
         font-family: Segoe UI;
     }
-    #address_radio_buttons{
+    #address_radio_buttons {
         width: 70%;
     }
-}

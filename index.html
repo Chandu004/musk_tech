@@ -1,99 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Musk Technologies Assignment</title>
-    <link href="css/reset.css" rel="stylesheet" type="text/css">  
-    <link href="css/styles.css" rel="stylesheet" type="text/css">  
-    <link href="css/media_queries/desktop.css"  rel="stylesheet" type="text/css">
-    <link href="css/media_queries/mobile.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">  
-    <!-- Bootstrap -->
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Musk Technologies Assignment</title>
+      <link href="css/reset.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <link href="css/media_queries/desktop.css"  rel="stylesheet" type="text/css">
+      <link href="css/media_queries/mobile.css" rel="stylesheet" type="text/css">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" type="text/javascript"></script>
+      <!-- Bootstrap -->
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper_container">
-        <div class="main_container">
+      <![endif]-->
+   </head>
+   <body>
+      <div class="wrapper_container">
+         <div class="main_container">
             <div class="menu">
-                <div class="logo">
-                    <p id="logo">MUSK</p>
-                </div>
-                <div class="menu_content">
-                    <div class="display_picture">
-                        <p id="dp_name">ADMIN</p>
-                    </div>
-                    <div class="menu_items">
-                        <ul>
+               <div class="logo">
+                  <p id="logo">MUSK</p>
+               </div>
+               <div class="menu_content">
+                  <div class="display_picture">
+                     <p id="dp_name">ADMIN</p>
+                  </div>
+                  <div class="menu_items">
+                     <ul>
                         <li><span class="glyphicon glyphicon-home"></span><span id="menu_item_name">Home</span></li>
                         <li><span class="glyphicon glyphicon-credit-card"></span><span id="menu_item_name">Anchors</span></li>
                         <li><span class="glyphicon glyphicon-user"></span><span id="menu_item_name">Suppliers</span></li>
                         <li><span class="glyphicon glyphicon-file"></span><span id="menu_item_name">Profile</span></li>
-                        </ul>
-                    </div>
-                </div>
+                     </ul>
+                  </div>
+               </div>
             </div>
+            <div class="mobile_menu">
+                <ul>
+                        <li><span class="glyphicon glyphicon-home"></span><span id="menu_item_name">Home</span></li>
+                        <li><span class="glyphicon glyphicon-credit-card"></span><span id="menu_item_name">Anchors</span></li>
+                        <li><span class="glyphicon glyphicon-user"></span><span id="menu_item_name">Suppliers</span></li>
+                        <li><span class="glyphicon glyphicon-file"></span><span id="menu_item_name">Profile</span></li>
+                     </ul>
+            </div> 
             <div class="main_content">
-                <div class="main_content_header">
-                     <div class="path_display">
-                        <p>Suppliers > Onboarding</p>
+               <div class="main_content_header">
+                  <div class="path_display">
+                     <p>Suppliers > Onboarding</p>
+                  </div>
+                  <div class="profile_options">
+                     <p>
+                        <span class="profile_icons"><span id="support" class="glyphicon glyphicon-flash"></span>Support</span>
+                        <span class="profile_icons"><span id="logout" class="glyphicon glyphicon-log-out"></span>Logout</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="main_content_wrapper">
+                  <div class="kyc_company_form" ng-app="formApp">
+                     <span id="kyc_headline">KYC Company</span>
+                     <span class="glyphicon glyphicon-minus"></span>  
+                    <!-- <span class="glyphicon glyphicon-plus"></span>  -->
+                     <div class="pan_card_form">
+                        <div class="pan_card_form_wrapper">
+                           <div class="pan_card_details">
+                              <p id="pan_card">PAN Card</p>
+                                   <form name="pan_card_form" ng-controller="formController">
+
+                                       <input ng-model="pan_number" class="pan_number" id="pan_card_input" type="text" placeholder="PAN No."  ng-pattern="/^[a-zA-Z0-9]*$/" name="pan_number" ng-required="required">
+                                            <p class="error" ng-show="pan_card_form.pan_number.$invalid && pan_card_form.pan_number.$dirty">Only Alphanumeric allowed</p>
+                                        
+                                       <input ng-model="company_name" class="company_name" id="pan_card_input" type="text" placeholder="Company Name"  ng-pattern="/^[a-zA-Z0-9]*$/" name="company_name" ng-required="required">
+                                            <p class="error" ng-show="pan_card_form.company_name.$invalid && pan_card_form.company_name.$dirty">Only Alphanumeric allowed</p>
+
+
+                                       <input ng-model="incorp_date" class="incorp_date" id="pan_card_input" type="text" class="incorp_date" placeholder="Date of Incorporation"  name="incorp_date" onfocus="(this.type='date')" ng-required="required">
+
+                                   </form>
+                           </div>
+                           <div class="pan_card_upload">
+                            <div class="pan_card_upload_wrapper">
+                                
+                                <a href="#" class="upload_button" onclick="document.getElementById('fileInput').click(); return false;">UPLOAD</a>
+                                
+                                <input type="file" id="fileInput" style="display:none;" name="files" onclick="upload_pan()"/>
+                            </div>  
+                            <p id="drag_and_drop">Or drag and drop file</p>    
+                           </div>
+                        </div>
                      </div>
-                     <div class="profile_options">
-                        <p>
-                            <span class="profile_icons"><span id="support" class="glyphicon glyphicon-flash"></span>Support</span>
-                            <span class="profile_icons"><span id="logout" class="glyphicon glyphicon-log-out"></span>Logout</span>
-                         </p>    
+                     <div class="tin_form">
+                        <div class="tin_form_wrapper">
+                           <div class="tin_details">
+                              <p id="tin">TIN</p>
+                               <form name="tin_form">
+                                   
+                                    <input id="tin_input" type="text" placeholder="TIN No." ng-model="tin_number" ng-pattern="/^[a-zA-Z0-9]*$/" name="tin_number" ng-required="required" >
+                                     <p class="error" ng-show="tin_form.tin_number.$invalid && tin_form.tin_number.$dirty">Only Alphanumeric allowed</p>
+                               </form>
+                           </div>
+                        </div>
                      </div>
-                </div>
-                    <div class="main_content_wrapper">
-                    <div class="kyc_company_form">
-                        <p id="kyc_headline">KYC Company</p>
-                        <div class="pan_card_form">
-                            <div class="pan_card_form_wrapper">
-                            <div class="pan_card_details">
-                                <p id="pan_card">PAN Card</p>
-                                <input id="pan_card_input" type="text" placeholder="PAN No.">
-                                <input id="pan_card_input" type="text" placeholder="Company Name">
-                                <input id="pan_card_input" type="text" placeholder="Date of Incorporation">
-                            </div>
-                            <div class="pan_card_upload">
-                            </div>
-                            </div>
+                     <div class="address_proof_form">
+                        <div class="address_proof_wrapper">
+                           <div class="address_proof_details">
+                              <p id="address_proof">Address Proof</p>
+                              <form id="address_radio_buttons">
+                                 <div id="radio_buttons_text"><input type="radio" checked="checked"> Electricity Bill</div>
+                                 <div id="radio_buttons_text"><input type="radio"> Water Bill</div>
+                                 <div id="radio_buttons_text"><input type="radio">Telephone Bill</div    >
+                              </form>
+                           </div>
                         </div>
-                        <div class="tin_form">
-                            <div class="tin_form_wrapper">
-                            <div class="tin_details">
-                                <p id="tin">TIN</p>
-                                <input id="tin_input" type="text" placeholder="TIN No.">
-                            </div>
-                            </div>
-                        </div>
-                        <div class="address_proof_form">
-                            <div class="address_proof_wrapper">
-                            <div class="address_proof_details">
-                                <p id="address_proof">Address Proof</p>
-                                <form id="address_radio_buttons">
-                                    <span id="radio_buttons_text"><input type="radio" checked="checked"> Electricity Bill</span>
-                                    <span id="radio_buttons_text"><input type="radio"> Water Bill</span>
-                                    <span id="radio_buttons_text"><input type="radio">Telephone Bill</span>
-                                </form>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-  </body>
-</html>
+         </div>
+       </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript">   </script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+   </body>
+</html>     
